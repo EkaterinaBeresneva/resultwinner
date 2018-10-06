@@ -10,42 +10,45 @@ namespace Результат_победителя
     {
         static void Main(string[] args)
         {
-            string[] masimen = new string[5];
-            double[,] masrez = new double[5,3];
-            double[] maslutsh = new double[5];
+            string[] massport = new string[5];
+            double[,] masrezult = new double[5,3];
+            double[] masbest = new double[5];
+            int p=0;
             Random random = new Random();
             double max = 1;
             for(int i = 0; i <= 4; i++)
             {
+                Console.WriteLine("\n Участник {0}", i+1);
                 for (int j = 0; j <= 2; j++)
                 {
-                    masrez[i, j] = random.NextDouble() + 1.3;
-                    Console.Write("\t[{0:F2}]", masrez[i, j]);
+                    masrezult[i, j] = random.NextDouble() + 1.3;
+                    Console.Write("\t[{0:F2}]", masrezult[i, j]);
                 }
-                Console.WriteLine("\n");
+                
             }
 
             for (int i = 0; i <= 4; i++)
             {
                 for (int j = 0; j <= 2; j++)
                 {
-                    if(max<masrez[i,j])
+                    if(max<masrezult[i,j])
                     {
-                        maslutsh[i]= masrez[i, j];
-                        max = masrez[i, j];
+                        masbest[i]= masrezult[i, j];
+                        max = masrezult[i, j];
                     }
                 }
                 
             }
-            max = maslutsh[0];
+            max = masbest[0];
             for (int i = 0; i <= 4; i++)
             {               
-                if (max < maslutsh[i])
+                if (max < masbest[i])
                 {
-                    max = maslutsh[i];
+                    max = masbest[i];
+                    p = i;
                 }
             }
-            Console.Write("Лучший результат[{0:F2}]", max);
+            Console.Write("\n Лучший результат в соревновании метания копья у Участника {1} [{0:F2}]", max, p+1);
             Console.ReadLine();
         }
     }
