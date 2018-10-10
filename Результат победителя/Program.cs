@@ -10,23 +10,22 @@ namespace Результат_победителя
     {
         static void Main(string[] args)
         {
-            string[] massport = new string[5];
+       
             double[,] masrezult = new double[5,3];
             double[] masbest = new double[5];
-            int p=0;
+            
             Random random = new Random();
-            double max = 1;
+            
             for(int i = 0; i <= 4; i++)
             {
                 Console.WriteLine("\n Участник {0}", i+1);
                 for (int j = 0; j <= 2; j++)
                 {
-                    masrezult[i, j] = random.NextDouble() + 1.3;
+                    masrezult[i, j] = random.NextDouble() + 1.5;
                     Console.Write("\t[{0:F2}]", masrezult[i, j]);
-                }
-                
+                }              
             }
-
+            double max = 1;
             for (int i = 0; i <= 4; i++)
             {
                 for (int j = 0; j <= 2; j++)
@@ -40,6 +39,7 @@ namespace Результат_победителя
                 
             }
             max = masbest[0];
+            int p = 0;
             for (int i = 0; i <= 4; i++)
             {               
                 if (max < masbest[i])
@@ -48,7 +48,7 @@ namespace Результат_победителя
                     p = i;
                 }
             }
-            Console.Write("\n Лучший результат в соревновании метания копья у Участника {1} [{0:F2}]", max, p+1);
+            Console.Write("\n Лучший результат в соревновании по прыжкам с места у Участника {1} [{0:F2}]", max, p+1);
             Console.ReadLine();
         }
     }
