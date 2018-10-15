@@ -4,41 +4,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Результат_победителя
+namespace WinnerDinner
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-
-            double[,] masrezult = new double[5, 3];
+            int n = 5, r = 3;
+            double[,] masrezult = new double[n, r];
             
 
             inputData(masrezult);
             double max;
             int p;
-            findMax(masrezult, out max, out p);
+            findMax(masrezult, out max, out p,n,r);
             Console.Write("\n Лучший результат в соревновании по прыжкам с места у Участника {1} [{0:F2}]", max, p + 1);
             Console.ReadLine();
         }
 
-        private static void findMax(double[,] masrezult, out double max, out int p)
+        public static void findMax(double[,] masrezult, out double max, out int p,int n,int r)
         {
             max = masrezult[0, 0];
             p = 0;
-            for (int i = 0; i <= 4; i++)
-            {
-                for (int j = 0; j <= 2; j++)
-                {
-                    if (Double.IsNaN(max) || max < masrezult[i, j])
+            
+                for (int i = 0; i <= n-1; i++)
                     {
+                        for (int j = 0; j <= r-1; j++)
+                        {
+                            if (Double.IsNaN(max) || max < masrezult[i, j])
+                            {
                         
-                        max = masrezult[i, j];
-                        p = i;
-                    }
-                }
+                                max = masrezult[i, j];
+                                p = i;
+                            }
+                        }
 
-            }
+                    }
+            
+           
+            
            
         }
 

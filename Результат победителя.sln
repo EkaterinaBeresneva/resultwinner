@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Результат победителя", "Результат победителя\Результат победителя.csproj", "{EEA39557-2694-42AE-A526-7170EE7D299D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinnerDinner", "Результат победителя\WinnerDinner.csproj", "{EEA39557-2694-42AE-A526-7170EE7D299D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest1", "UnitTest1\UnitTest1.csproj", "{6DF3B629-9607-4266-BC12-1696126CEE45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{EEA39557-2694-42AE-A526-7170EE7D299D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEA39557-2694-42AE-A526-7170EE7D299D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEA39557-2694-42AE-A526-7170EE7D299D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DF3B629-9607-4266-BC12-1696126CEE45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DF3B629-9607-4266-BC12-1696126CEE45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DF3B629-9607-4266-BC12-1696126CEE45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DF3B629-9607-4266-BC12-1696126CEE45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C33BFFA-E79C-4E3A-A1BC-CDC61973E0A9}
 	EndGlobalSection
 EndGlobal
